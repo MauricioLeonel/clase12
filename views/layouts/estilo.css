@@ -1,0 +1,33 @@
+.contenedor{
+	background: #3b4d56;
+	color: #fff;
+	display: flex;
+}
+
+h3{
+	padding: 20px;
+}
+
+.elementos{
+	display: flex;
+}
+
+.sinElementos{
+	background: #EEDF8B;
+	color: #89760c;
+}
+.sinElementos h3{
+	padding: 20px;
+}
+
+
+.elementos p{
+	margin: 20px 0px 20px 20px;
+}
+
+h1{
+	color: blue;
+}
+img{
+	width: 60px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../layouts/estilo.css">
+</head>
+<body>
+	<h1>Vista de Productos con EJS</h1>
+	<% if (data[0]) { %>
+	<div class="contenedor">
+		<div>
+		  	<h3>Titulo</h3>
+			<% data.forEach(function(e){ %>
+				<div class="elementos">
+					<p><%= e.title %></p>
+				</div>
+			<% }) %>
+	  	</div>
+	  	<div>
+	  		<h3>Precio</h3>
+			<% data.forEach(function(e){ %>
+		  	<div class="elementos">
+				<p><%= e.precio %></p>
+			</div>
+			<% }) %>
+	  	</div>
+	  	<div>
+	  		<h3>foto</h3>
+			<% data.forEach(function(e){ %>
+		  	<div class="elementos">
+				<img src=<%= e.thumbnail %> >
+			</div>
+			<% }) %>
+	  	</div>
+	 </div>
+	<% } %>
+		
+	
+	<% if (!data[0]) { %>
+		<div class="sinElementos">
+			<h3> No se encontraron Productos</h3>
+		</div>
+	<%}%>
+	<a href="/">ir a Home</a>
+</body>
+</html>

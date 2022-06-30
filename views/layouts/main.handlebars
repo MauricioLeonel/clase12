@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/layouts/estilo.css">
+</head>
+<body>
+	{{!-- {{{body}}} --}}
+
+	<h1>Vista de Productos con HandleBars</h1>
+	<div class="contenedor">
+	{{#if data}}
+			<div>
+				<h3>Titulo</h3>
+				{{#each data}}
+				<div class="elementos">
+					<p>{{title}}</p>
+				</div>
+				{{/each}}
+			</div>
+
+			<div>
+				<h3>precio</h3>
+				{{#each data}}
+				<div class="elementos">
+					<p>{{precio}}</p>
+				</div>
+				{{/each}}
+			</div>
+
+			<div>
+				<h3>foto</h3>
+				{{#each data}}
+				<div class="elementos">
+					<img src={{thumbnail}} >
+				</div>
+				{{/each}}
+			</div>
+			
+
+	{{/if}}
+	</div>
+
+
+	{{#unless data}}
+		<div class="sinElementos">
+			<h3>No se encontraron productos</h3>
+		</div>
+	{{/unless}}
+
+	<a href="/">Ir a Home</a>
+</body>
+</html>

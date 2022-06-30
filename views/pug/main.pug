@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    title prueba
+    style
+      include ../layouts/estilo.css
+  body
+    h1 Vista de Productos con PUG
+    unless data[0]
+      .sinElementos
+        h3 No se encontraron productos
+    if data[0]
+      .contenedor
+        div
+          h3 Titulo
+          each val in data
+            .elementos
+              p= val.title
+        div
+          h3 Precio
+          each val in data
+            .elementos
+              p= val.precio
+        div
+          h3 Foto
+          each val in data
+            .elementos
+              img(src=val.thumbnail)  
+      
+
+    a(href="/") ir a Home

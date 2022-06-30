@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+	<form method="POST" id="formu">
+		<input type="text" name="title" placeholder="titulo">
+		<input type="number" name="price" placeholder="precio">
+		<input type="thumbnail" name="thumbnail" placeholder="foto">
+		<input type="submit" value="Registar">
+	</form>
+	<a href="/api/productos/handlebars">ir a productos con Handlebars</a>
+	<a href="/api/productos/pug">ir a productos con Pug</a>
+	<a href="/api/productos/ejs">ir a productos con EJS</a>
+	<div id="elementosRender">
+		
+	</div>
+	<form method="POST" id="formuChat">
+		<input type="email" name="email" placeholder="email">
+		<input type="text" name="mensaje" placeholder="ingrese su mensaje">
+		<input type="submit" value="enviar">
+	</form>
+	<div id="chatContenedor" class="chatContenedor" ></div>
+	<script src="script/script.js"></script>
+</body>
+</html>
